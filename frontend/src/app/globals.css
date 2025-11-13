@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+:root {
+  --focus-ring: 0 0 0 3px rgba(56, 189, 248, 0.5);
+}
+
+/* Base page styling */
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+/* Subtle global background gradient */
+.main-gradient {
+  background:
+    radial-gradient(circle at top left, rgba(125, 211, 252, 0.35), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(196, 181, 253, 0.35), transparent 55%);
+}
+
+/* Accessible focus outline helper */
+.focus-ring:focus-visible {
+  outline: var(--focus-ring) solid;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for in-page nav links */
+html {
+  scroll-behavior: smooth;
+}
